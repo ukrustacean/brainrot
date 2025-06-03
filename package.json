@@ -1,11 +1,11 @@
 {
-  "name": "braincook",
+  "name": "brainrot",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "main.ts",
   "scripts": {
     "build": "tsc",
-    "start": "tsc && node ./dist/index.js"
+    "start": "tsc && node ./dist/main.js"
   },
   "dependencies": {
     "commander": "^14.0.0"
