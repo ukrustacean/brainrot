@@ -7,7 +7,7 @@ function getChar(): number {
   return buffer[0];
 }
 
-export function eval(operations: Code, cells: number[] = []): string {
+export function evaluate(operations: Code, cells: number[] = []): string {
   let pos = 0;
   let result = "";
 

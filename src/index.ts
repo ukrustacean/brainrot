@@ -1,4 +1,4 @@
-import { evaluateValue } from "./evaluateValue";
+import { evaluate } from "./eval";
 import {
   Code,
   Operator,
@@ -105,7 +105,7 @@ function main() {
   const parsed = parse(
     "++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.",
   );
-  console.log(evaluateValue(parsed));
+  console.log(evaluate(parsed));
 }
 
 main();
