@@ -1,9 +1,9 @@
 class UnknownOperatorException {
-    symbol: string;
+  symbol: string;
 
-    constructor(symbol: string) {
-        this.symbol = symbol;
-    }
+  constructor(symbol: string) {
+    this.symbol = symbol;
+  }
 }
 
 export type Ast = AstNode[];
@@ -16,24 +16,24 @@ export type AstNode =
   | { kind: "Output" };
 
 export function areOfSameKind(a: AstNode, b: AstNode): boolean {
-    return a.kind == b.kind;
+  return a.kind == b.kind;
 }
 
 export function symbolToNode(symbol: string): AstNode {
-    switch (symbol) {
-        case "+":
-            return { kind: "Add", value: 1 };
-        case "-":
-            return { kind: "Add", value: -1 };
-        case ">":
-            return { kind: "Move", value: 1 };
-        case "<":
-            return { kind: "Move", value: -1 };
-        case ",":
-            return { kind: "Input" };
-        case ".":
-            return { kind: "Output" };
-        default:
-            throw new UnknownOperatorException(symbol);
-    }
+  switch (symbol) {
+    case "+":
+      return { kind: "Add", value: 1 };
+    case "-":
+      return { kind: "Add", value: -1 };
+    case ">":
+      return { kind: "Move", value: 1 };
+    case "<":
+      return { kind: "Move", value: -1 };
+    case ",":
+      return { kind: "Input" };
+    case ".":
+      return { kind: "Output" };
+    default:
+      throw new UnknownOperatorException(symbol);
+  }
 }
