@@ -1,4 +1,4 @@
-import { Code } from "./types";
+import { Ast } from "./ast";
 import { readSync } from "fs";
 
 function getChar(): number {
@@ -7,7 +7,7 @@ function getChar(): number {
   return buffer[0];
 }
 
-export function evaluate(operations: Code, cells: number[] = []): string {
+export function evaluate(operations: Ast, cells: number[] = []): string {
   let pos = 0;
   let result = "";
 
@@ -20,7 +20,7 @@ export function evaluate(operations: Code, cells: number[] = []): string {
     if (pos < 0) pos = 0;
   };
 
-  const runOps = (ops: Code) => {
+  const runOps = (ops: Ast) => {
     for (const op of ops) {
       switch (op.kind) {
         case "Add":
