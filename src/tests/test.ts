@@ -25,6 +25,7 @@ test('Nested loop: Double value in cell 1', () => {
   const buffer = new Array(10).fill(0);
   evaluate(ast, buffer);
   expect(buffer[1]).toBe(4);
+});
 
 test('Clear cell using loop: [->-<]', () => {
   const ast = parse('++++++[->-<]');
