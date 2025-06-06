@@ -25,7 +25,7 @@ A Brainfuck interpreter written in TypeScript with basic optimizations.
 ## Installation
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/ukrustacean/brainrot.git
 cd brainrot
 npm install
 npm run build
