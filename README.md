@@ -42,6 +42,13 @@ node .\dist\main.js --expr <your expression> or
 npm run start -- --expr <your expression>
 ```
 
+## Test
+
+```bash
+# Run tests
+npm run test
+```
+
 ### Project Structure
 ```
 src/
@@ -51,3 +58,6 @@ src/
 ├── main.ts         # CLI interface
 └── __tests__/      # Test suite
 ```
+
+### [Design Document](https://docs.google.com/document/d/1F1H9qMRyrWmAN-cJgpqhQdmmbIxH-3ZjbyWo4Fop7mw/edit?tab=t.0#heading=h.u6b6uyq9xf30)
+
