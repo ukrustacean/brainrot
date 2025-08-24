@@ -1,4 +1,4 @@
-import { areOfSameKind, Ast, symbolToNode } from "./ast";
+import {areOfSameKind, assertValue, Ast, symbolToNode} from "./ast";
 
 class UnmatchedOpeningBracketException {}
 
@@ -22,10 +22,8 @@ export function parse(s: string): Ast {
             const lastNode = result.at(-1);
 
             if (lastNode && areOfSameKind(node, lastNode)) {
-              if (lastNode.kind != "Add" && lastNode.kind != "Move")
-                throw new Error("Unreachable");
-              if (node.kind != "Add" && node.kind != "Move")
-                throw new Error("Unreachable");
+              assertValue(lastNode)
+              assertValue(node)
 
               lastNode.value += node.value;
             } else {
